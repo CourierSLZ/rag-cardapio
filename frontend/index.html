@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atendente do Cardápio</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    #chat { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; min-height: 260px; }
+    .msg { margin: .5rem 0; } .user { font-weight: 600; } .fontes { color: #666; font-size: .8rem; }
+    form { display: flex; gap: .5rem; margin-top: 1rem; } input { flex: 1; padding: .6rem; }
+  </style>
+</head>
+<body>
+  <h1>🍕 Atendente do Cardápio</h1>
+  <div id="chat"></div>
+  <form id="form">
+    <input id="pergunta" placeholder="Ex.: tem opção vegana?" autocomplete="off" required />
+    <button>Enviar</button>
+  </form>
+  <script>
+    const chat = document.getElementById("chat");
+    const form = document.getElementById("form");
+    const input = document.getElementById("pergunta");
+
+    function add(classe, texto) {
+      const div = document.createElement("div");
+      div.className = "msg " + classe;
+      div.textContent = texto; // textContent evita injeção de HTML
+      chat.appendChild(div);
+      return div;
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const pergunta = input.value.trim();
+      if (!pergunta) return;
+      add("user", "Você: " + pergunta);
+      input.value = "";
+      const carregando = add("bot", "Pensando...");
+      try {
+        const r = await fetch("/perguntar", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ pergunta }),
+        });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const data = await r.json();
+        carregando.textContent = "Atendente: " + data.resposta;
+        add("fontes", "Fontes: " + data.fontes.map((f) => f.id).join(", "));
+      } catch (err) {
+        carregando.textContent = "Erro ao consultar: " + err.message;
+      }
+    });
+  </script>
+</body>
+</html>

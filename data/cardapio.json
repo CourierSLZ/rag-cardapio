@@ -1,0 +1,12 @@
+[
+  {"id": "pizza-calabresa", "nome": "Pizza de Calabresa", "categoria": "pizza", "descricao": "Molho de tomate, mussarela, calabresa fatiada e cebola.", "preco": 49.9, "restricoes": "Contém glúten e lactose."},
+  {"id": "pizza-margherita", "nome": "Pizza Margherita", "categoria": "pizza", "descricao": "Molho de tomate, mussarela de búfala e manjericão fresco.", "preco": 52.0, "restricoes": "Vegetariana. Contém glúten e lactose."},
+  {"id": "pizza-vegana", "nome": "Pizza Vegana de Legumes", "categoria": "pizza", "descricao": "Massa sem ovos, queijo de castanha, abobrinha, pimentão e cogumelos.", "preco": 58.0, "restricoes": "Vegana. Contém glúten."},
+  {"id": "hamburguer-classico", "nome": "Hambúrguer Clássico", "categoria": "lanche", "descricao": "Pão brioche, hambúrguer bovino de 160g, queijo cheddar, alface e tomate.", "preco": 32.0, "restricoes": "Contém glúten e lactose."},
+  {"id": "hamburguer-veggie", "nome": "Hambúrguer Veggie", "categoria": "lanche", "descricao": "Hambúrguer de grão-de-bico e beterraba, pão integral, rúcula e maionese de ervas.", "preco": 29.0, "restricoes": "Vegetariano. Contém glúten."},
+  {"id": "batata-frita", "nome": "Batata Frita Grande", "categoria": "acompanhamento", "descricao": "Porção de batatas fritas crocantes com sal e páprica.", "preco": 18.0, "restricoes": "Sem glúten e sem lactose."},
+  {"id": "salada-caesar", "nome": "Salada Caesar", "categoria": "salada", "descricao": "Alface americana, frango grelhado, croutons, parmesão e molho caesar.", "preco": 34.0, "restricoes": "Contém glúten e lactose."},
+  {"id": "suco-laranja", "nome": "Suco de Laranja 500ml", "categoria": "bebida", "descricao": "Suco natural de laranja, sem açúcar.", "preco": 11.0, "restricoes": "Sem glúten e sem lactose."},
+  {"id": "refrigerante-cola", "nome": "Refrigerante Cola 350ml", "categoria": "bebida", "descricao": "Lata gelada de refrigerante sabor cola.", "preco": 7.0, "restricoes": "Sem glúten e sem lactose."},
+  {"id": "brownie", "nome": "Brownie com Sorvete", "categoria": "sobremesa", "descricao": "Brownie de chocolate meio amargo servido quente com bola de sorvete de creme.", "preco": 24.0, "restricoes": "Contém glúten, lactose e ovos."}
+]

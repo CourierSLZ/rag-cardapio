@@ -1,0 +1,10 @@
+[
+  {"pergunta": "Vocês têm alguma pizza vegana?", "esperados": ["pizza-vegana"]},
+  {"pergunta": "Quero algo sem glúten e sem lactose para acompanhar", "esperados": ["batata-frita"]},
+  {"pergunta": "Qual lanche não tem carne?", "esperados": ["hamburguer-veggie"]},
+  {"pergunta": "O que tem de sobremesa com chocolate?", "esperados": ["brownie"]},
+  {"pergunta": "Tem suco natural?", "esperados": ["suco-laranja"]},
+  {"pergunta": "Qual pizza leva calabresa?", "esperados": ["pizza-calabresa"]},
+  {"pergunta": "Tem salada com frango?", "esperados": ["salada-caesar"]},
+  {"pergunta": "Quero uma bebida gelada de lata", "esperados": ["refrigerante-cola"]}
+]
